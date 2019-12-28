@@ -9,11 +9,15 @@
         <h1> This is a test page AJAX</h1>
         <a href="index.html"> back to jQuery test page</a>
 
+        <p></p >
+
         <script type="text/javascript">
         
-            $.ajax("info.txt").done(function(data) {
-                alert(data);
-            }).fail(function() {
+            $.ajax("info.txt")
+            .done(function(data) {
+                $("p").html(data);
+            })
+            .fail(function() {
                 alert("Could not get data");
             });
         </script>
